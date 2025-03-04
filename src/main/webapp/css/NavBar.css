@@ -2,15 +2,28 @@ a  {
     width: max-content;
 }
 
-button {
+button  {
     border: black 2px solid ;
-    background: none;
-    color: black;
     padding: 4px 10px;
     border-radius: 5px;
 }
 
-button:hover{
+.btn-register{
+    background: white;
+    color: black;
+}
+
+ .btn-login{
     background: black;
     color: white;
+}
+
+.btn-login:hover{
+    background: rgba(239, 236, 236, 0.45);
+    color: black;
+}
+.btn-register:hover{
+    background: rgb(3, 10, 41);
+    color: white;
+    border: 2px rgb(3, 10, 41) solid;
 }

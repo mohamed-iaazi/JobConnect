@@ -21,7 +21,8 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <!-- Navbar brand -->
-            <a class="navbar-brand h1 mb-0 " href="#">JobConnect</a>
+            <a class="navbar-brand h1 mb-0 " href="#">  <img style="width: 140px ;
+height: 30px" src="images/logo.png"></a>
 
             <!-- Navbar toggler -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -42,13 +43,11 @@
                 </ul>
 
                 <section class="btns d-flex justify-content-end  w-75">
-                    <button class="m-2 rounded-1 btn-signup" >
-                        <a id="register" class="nav-link" href="Register.jsp">Register</a>
+                    <button class="m-2 rounded-1  btn-register" >
+                        <a id="register" class="nav-link " href="Register.jsp">Register</a>
                     </button>
-                    <button class="m-2 rounded-1 btn-login" href="login"  >
+                    <button class="m-2 rounded-1 btn-login btn-login" href="login"  >
                         <a id="login" class="nav-link" href="Login.jsp">login</a>
-
-
                     </button>
                 </section>
 
