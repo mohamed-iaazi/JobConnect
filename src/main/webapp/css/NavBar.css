@@ -1,0 +1,16 @@
+a  {
+    width: max-content;
+}
+
+button {
+    border: black 2px solid ;
+    background: none;
+    color: black;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
+button:hover{
+    background: black;
+    color: white;
+}

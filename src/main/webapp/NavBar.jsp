@@ -13,6 +13,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<style>
+    <%@include file="css/NavBar.css"%>
+
+</style>
 <header>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -30,11 +34,14 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="Appointement">offre dʼemploi </a>
+                        <a class="nav-link" href="Offre">offre dʼemploi </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="CreateOffre">Creer Un Offre </a>
                     </li>
                 </ul>
 
-                <section class="btns d-flex justify-content-end w-75">
+                <section class="btns d-flex justify-content-end  w-75">
                     <button class="m-2 rounded-1 btn-signup" >
                         <a id="register" class="nav-link" href="Register.jsp">Register</a>
                     </button>
@@ -45,15 +52,6 @@
                     </button>
                 </section>
 
-
-                <section class="btns d-flex justify-content-end w-75">
-                    <button class="m-2  btn-logout" >
-                        <a id="logoutt" class="nav-link" href="" onclick="logout()">logout</a>
-                    </button>
-
-
-
-                </section>
 
 
 
