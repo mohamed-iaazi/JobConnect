@@ -40,3 +40,10 @@
 0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:37:20 +0100] "GET /mnt/data/Log%20in.png HTTP/1.1" 404 604
 0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:37:49 +0100] "GET /JobConnect/Login.jsp HTTP/1.1" 200 3251
 0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:37:49 +0100] "GET /mnt/data/Log%20in.png HTTP/1.1" 404 604
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:39:15 +0100] "GET /JobConnect/Login.jsp HTTP/1.1" 200 3240
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:39:15 +0100] "GET /JobConnect/logoConnectJOB.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:39:15 +0100] "GET /JobConnect/pagesConnectJob1.png HTTP/1.1" 200 51922
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:43:07 +0100] "GET /JobConnect/Login.jsp HTTP/1.1" 200 3384
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:43:07 +0100] "GET /JobConnect/logoConnectJOB.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:43:07 +0100] "GET /JobConnect/pagesConnectJob1.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:43:57 +0100] "GET /JobConnect/Login.jsp HTTP/1.1" 200 3247
