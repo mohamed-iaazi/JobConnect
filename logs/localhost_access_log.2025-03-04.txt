@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:02:43 +0100] "GET /JobConnect HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:02:45 +0100] "GET /JobConnect/ HTTP/1.1" 200 59
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:03:24 +0100] "GET /JobConnect/Login.jsp HTTP/1.1" 200 1363
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:03:24 +0100] "GET /JobConnect/styles.css HTTP/1.1" 404 706
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:03:32 +0100] "GET /JobConnect/register.jsp HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:03:54 +0100] "GET /JobConnect/register.jsp HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:03:59 +0100] "GET /JobConnect/register.jsp HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:10:11 +0100] "GET /JobConnect HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:10:11 +0100] "GET /JobConnect/ HTTP/1.1" 200 59
+0:0:0:0:0:0:0:1 - - [04/Mar/2025:15:10:33 +0100] "GET /JobConnect/Login.jsp HTTP/1.1" 200 2154
