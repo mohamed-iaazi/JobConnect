@@ -5,6 +5,10 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <welcome-file-list>
+<<<<<<< HEAD
     <welcome-file>/</welcome-file>
+=======
+    <welcome-file>Register.jsp</welcome-file>
+>>>>>>> 90102e3 (create login.jsp et model)
   </welcome-file-list>
 </web-app>
