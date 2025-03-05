@@ -22,13 +22,12 @@
 <!--Container Main start-->
 <div class="height-100 light">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-4">
+
+
         <section class="offre">
-          <%@include file="../component/card.jsp"%>
+          <%@include file="../component/OffreList.jsp"%>
         </section>
-      </div>
-    </div>
+
   </div>
 </div>
 

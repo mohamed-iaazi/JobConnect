@@ -1,4 +1,6 @@
 package model;
 
-public class Candidate {
+public class Candidate  {
+
+    private  int id ;
 }
