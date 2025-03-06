@@ -1,6 +1,6 @@
 package Model;
 
-public class registerModel{
+public class userModel{
     private int id;
     private String nom;
     private String email;
@@ -8,7 +8,7 @@ public class registerModel{
     private String moteDePass;
 
 
-    public registerModel ( int id,String nom,String email,String tel,String moteDePass){
+    public userModel ( int id,String nom,String email,String tel,String moteDePass){
         this.id=id;
         this.nom=nom;
         this.email=email;
@@ -16,7 +16,7 @@ public class registerModel{
         this.moteDePass=moteDePass;
 
     }
-    public registerModel (String nom,String email,String tel, String moteDePass){
+    public userModel (String nom,String email,String tel, String moteDePass){
         this.nom=nom;
         this.email=email;
         this.moteDePass = moteDePass;
@@ -25,30 +25,46 @@ public class registerModel{
 
     }
 
-    public int getId(){
+    public int getId() {
         return id;
     }
-    public void setId(int id){
-        this.id=id;
+
+    public void setId(int id) {
+        this.id = id;
     }
-    public String getNom(){
+
+    public String getNom() {
         return nom;
     }
-    public void setNom(String nom){
-        this.nom=nom;
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
-    public String getEmail(){
+
+    public String getEmail() {
         return email;
     }
-    public void setTel(String tel){
-        this.tel=tel;
+
+    public void setEmail(String email) {
+        this.email = email;
     }
-    public String getMoteDePass(){
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+    public String getMoteDePass() {
         return moteDePass;
     }
-    public void setId(String moteDePass){
+
+    public void setMoteDePass(String moteDePass) {
         this.moteDePass = moteDePass;
     }
+
     @Override
     public String toString() {
         return "registerModel{" +
