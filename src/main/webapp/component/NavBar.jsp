@@ -14,7 +14,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <style>
-    <%@include file="css/NavBar.css"%>
+    <%@include file="../css/NavBar.css"%>
 
 </style>
 <header>
@@ -22,7 +22,7 @@
         <div class="container-fluid">
             <!-- Navbar brand -->
             <a class="navbar-brand h1 mb-0 " href="#">  <img style="width: 140px ;
-height: 30px" src="images/logo.png"></a>
+height: 30px" src="./images/logo.png"></a>
 
             <!-- Navbar toggler -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -44,10 +44,10 @@ height: 30px" src="images/logo.png"></a>
 
                 <section class="btns d-flex justify-content-end  w-75">
                     <button class="m-2 rounded-1  btn-register" >
-                        <a id="register" class="nav-link " href="Register.jsp">Register</a>
+                        <a id="register" class="nav-link " href="../Register.jsp">Register</a>
                     </button>
                     <button class="m-2 rounded-1 btn-login btn-login" href="login"  >
-                        <a id="login" class="nav-link" href="Login.jsp">login</a>
+                        <a id="login" class="nav-link" href="../Login.jsp">login</a>
                     </button>
                 </section>
 
