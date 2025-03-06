@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Offer;
 import dao.DAO;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -7,13 +8,12 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.Offer;
 
 import java.io.IOException;
 import java.sql.Date;
 import java.sql.SQLException;
 
-@WebServlet("/")
+@WebServlet("/t")
 public class ControllerDachboard extends HttpServlet {
     DAO dao;
 
