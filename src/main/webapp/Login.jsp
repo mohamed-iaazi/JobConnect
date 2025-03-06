@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - JOBCONNECT</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
     <style>
         body {
             background-color: #f8f9fa;
@@ -65,11 +66,11 @@
                         <button class="btn btn-outline-dark w-100 mb-2">Connectez-vous avec Google</button>
                         <button class="btn btn-outline-dark w-100">Connectez-vous avec Apple</button>
                     </div>
-                    <p class="text-center mt-3">Vous n'avez pas de compte ? <a href="register.jsp">Inscrivez-vous</a></p>
+                    <p class="text-center mt-3">Vous n'avez pas de compte ? <a href="Register.jsp">Inscrivez-vous</a></p>
                 </div>
             </div>
             <div class="col-md-6 image-container">
-                <img src="pagesConnectJob1.png" alt="Illustration">
+                <img src="dr.png" alt="Illustration">
             </div>
         </div>
     </div>
