@@ -1,8 +1,0 @@
-0:0:0:0:0:0:0:1 - - [05/Mar/2025:15:50:43 +0100] "GET /JobConnect HTTP/1.1" 302 -
-0:0:0:0:0:0:0:1 - - [05/Mar/2025:15:50:44 +0100] "GET /JobConnect/ HTTP/1.1" 200 59
-0:0:0:0:0:0:0:1 - - [05/Mar/2025:15:50:52 +0100] "GET /JobConnect/Login.jsp HTTP/1.1" 200 3240
-0:0:0:0:0:0:0:1 - - [05/Mar/2025:15:50:52 +0100] "GET /JobConnect/logoConnectJOB.png HTTP/1.1" 304 -
-0:0:0:0:0:0:0:1 - - [05/Mar/2025:15:50:52 +0100] "GET /JobConnect/pagesConnectJob1.png HTTP/1.1" 304 -
-0:0:0:0:0:0:0:1 - - [05/Mar/2025:15:52:53 +0100] "GET /JobConnect HTTP/1.1" 302 -
-0:0:0:0:0:0:0:1 - - [05/Mar/2025:15:52:54 +0100] "GET /JobConnect/ HTTP/1.1" 200 59
-0:0:0:0:0:0:0:1 - - [05/Mar/2025:15:52:59 +0100] "GET /JobConnect/Login.jsp HTTP/1.1" 200 3206
