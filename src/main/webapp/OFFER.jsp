@@ -24,16 +24,44 @@
 </div>
 <!--Container Main start-->
 <div class="height-100 bg-light">
-   <div class="container">
-       <div class="row">
-           <div class="col-lg-9">
-               <h3>Emplois</h3>
-           </div>
-           <div class="col-lg-3">
-               <a href="offers" class="btn btn-primary">Publier une annonce</a>
-           </div>
-       </div>
-   </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-9">
+                <img src="https://images2.imgbox.com/61/f1/QzHdRqlf_o.png" style="width: 48%;" alt="" />
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form action="insertOffers" method="post">
+                            <div class="form-group">
+                                <label for="Description"> Description</label>
+                                <textarea class="form-control" name="Description" id="Description" rows="3" placeholder="Saisze  Description"></textarea>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label for="date">Date</label>
+                                <input type="date" class="form-control" name="date" id="date">
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label for="Titre">Titre</label>
+                                <input type="text" name="titre" class="form-control" id="Titre" placeholder="Saisze  Titre">
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary mb-2">Confirm</button>
+
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {

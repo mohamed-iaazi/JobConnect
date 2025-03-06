@@ -20,12 +20,19 @@ body {
     margin: var(--header-height) 0 0 0;
     padding: 0 1rem;
     font-family: var(--body-font);
+    background-color: #f8f9fa !important;
     font-size: var(--normal-font-size);
     transition: .5s
 }
 
 a {
     text-decoration: none
+}
+hr{
+    font-size: var(--normal-font-size);
+}
+label{
+    padding-bottom: var(--normal-font-size);
 }
 
 .header {
