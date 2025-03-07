@@ -16,4 +16,5 @@
     <servlet-name>CandidateServlet</servlet-name>
     <servlet-class>Controller.CandidateServlet</servlet-class>
   </servlet>
+
 </web-app>
