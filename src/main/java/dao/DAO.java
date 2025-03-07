@@ -2,8 +2,7 @@ package dao;
 
 
 
-import model.Offer;
-import model.Recruteur;
+import Model.Offer;
 import model.Users;
 
 import java.sql.Connection;
@@ -32,7 +31,6 @@ public class DAO {
     public void AjouterOffers(Offer offer) {
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(Insert_Offers)) {
-
             preparedStatement.setString(1, offer.getDescription());
             preparedStatement.setString(3,offer.getTitre());
             preparedStatement.setDate(2,offer.getDate_publication());

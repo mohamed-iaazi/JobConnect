@@ -1,6 +1,6 @@
-package model;
+package Model;
 
-public class Recruteur extends Users{
+public class Recruteur extends model.Users {
       Offer offer;
 
     public Recruteur(int id, String nom, String email, String telephone, Offer offer) {
