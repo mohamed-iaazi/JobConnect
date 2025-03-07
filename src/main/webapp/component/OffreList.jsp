@@ -80,10 +80,17 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="job-right my-4 flex-shrink-0">
-                            <a href="#" class="btn d-block w-100 d-sm-inline-block btn-success">Apply now</a>
-                        </div>
-                    </div>
+                   <div class="job-right my-4 flex-shrink-0">
+                       <button
+                               class="btn d-block w-100 d-sm-inline-block btn-success apply-btn"
+                               onclick="applyJob(this)"
+                               onselect="applyJob(this)"
+                       >
+                           Apply now
+                       </button>
+                   </div>
+
+               </div>
 
                     </c:forEach>
             <!-- START Pagination -->
@@ -114,3 +121,6 @@
 </div>
     </div>
     </div>
+
+
+

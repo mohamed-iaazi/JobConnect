@@ -39,9 +39,8 @@ public class CandidateDao {
 
     public static List<Offer> getListOffer() {
 
-
         // using try-with-resources to avoid closing resources (boiler plate code)
-        List<Offer> produits = new ArrayList<>();
+        List<Offer> Offer = new ArrayList<>();
         // Step 1: Establishing a Connection
         String SELECT_ALL_LIST="select * from OffreEmploi";
         try (Connection connection = getConnection();
@@ -58,13 +57,13 @@ public class CandidateDao {
                 String description = rs.getString("Description");
                 Date date = rs.getDate("Date");
 
-                produits.add(new Offer( name, description,date));
+                Offer.add(new Offer( name, description,date));
 
             }
         } catch (SQLException e) {
         }
         System.out.print("list of in method ");
 
-        return produits;
+        return Offer;
     }
 }
