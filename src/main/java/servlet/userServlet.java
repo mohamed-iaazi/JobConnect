@@ -27,20 +27,23 @@ public class userServlet extends HttpServlet {
         String Telephone = request.getParameter(" Telephone");
         String password = request.getParameter("password");
 
-//        userModel user = null;
-//        user.setId(Integer.parseInt(Id));
-//        user.setNom(Nom);
-//        user.setEmail(Email);
-//        user.setEmail(Telephone);
-//        user.setPassword(password);
+        userModel user = new userModel();
+        user.setNom(Nom);
+        user.setEmail(Email);
+        user.setTelephone(Telephone);
+        user.setPassword(password);
 
 
-        userModel user = new userModel( Nom, Email, Telephone, password);
         Dao.userDao userDao= new userDao();
-           boolean ajouter=  userDao.addUser(user);
+        boolean ajouter= false;
+        try {
+            ajouter = userDao.addUser(user);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
 
 
-            if (ajouter) {
+        if (ajouter) {
                 request.getSession().setAttribute("user", user.getNom());
                 response.sendRedirect("loginSuccess.jsp");
             } else {
