@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     body {
-      padding-top: 56px; /* Adjust this value if your navbar height differs */
+        padding-top: 56px; /* Adjust this value if your navbar height differs */
     }
   </style>
 </head>

@@ -1,78 +1,85 @@
 package Model;
 
 public class userModel{
-    private int id;
-    private String nom;
-    private String email;
-    private String tel;
-    private String moteDePass;
+    private int Id;
+    private String Nom;
+    private String Email;
+    private String  Telephone;
+    private String password;
 
 
-    public userModel ( int id,String nom,String email,String tel,String moteDePass){
-        this.id=id;
-        this.nom=nom;
-        this.email=email;
-        this.tel=tel;
-        this.moteDePass=moteDePass;
+    public userModel ( int Id,String Nom,String Email,String Telephone,String password){
+        this.Id=Id;
+        this.Nom=Nom;
+        this.Email=Email;
+        this.Telephone=Telephone;
+        this.password=password;
 
     }
-    public userModel (String nom,String email,String tel, String moteDePass){
-        this.nom=nom;
-        this.email=email;
-        this.moteDePass = moteDePass;
-        this.tel=tel;
-        this.moteDePass=moteDePass;
+    public userModel (String Nom,String Email,String Telephone, String password){
+        this.Nom= Nom;
+        this.Email= Email;
+        this.Telephone= Telephone;
+        this.password= password;
+
+    }
+
+    public userModel() {
 
     }
 
     public int getId() {
-        return id;
+        return Id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int Id) {
+        this.Id = Id;
     }
 
     public String getNom() {
-        return nom;
+        return Nom;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setNom(String Nom) {
+        this.Nom = Nom;
     }
 
     public String getEmail() {
-        return email;
+        return Email;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.Email = Email;
     }
 
-    public String getTel() {
-        return tel;
+    public String getTelephone() {
+        return Telephone;
     }
 
-    public void setTel(String tel) {
-        this.tel = tel;
+    public void setTelephone(String Telephone) {
+        this.Telephone = Telephone;
     }
 
-    public String getMoteDePass() {
-        return moteDePass;
+    public String getPassword() {
+        return password;
     }
 
-    public void setMoteDePass(String moteDePass) {
-        this.moteDePass = moteDePass;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setMoteDePass(String password) {
+        this.password = password;
     }
 
     @Override
     public String toString() {
         return "registerModel{" +
-                "id=" + id +
-                ", nom='" + nom + '\'' +
-                ", email='" + email + '\'' +
-                ", tel='" + tel+ '\'' +
-                ", mot de pass='" + moteDePass+ '\'' +
+                "Id=" + Id +
+                ", Nom='" + Nom + '\'' +
+                ", Email='" + Email + '\'' +
+                ", Telephone='" + Telephone+ '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }
