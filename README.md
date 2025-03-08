@@ -67,3 +67,7 @@ Les contributions sont les bienvenues ! Si vous souhaitez améliorer l'applicati
 ## Licence 📜
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus d'informations.
+
+##LES Diagrammes
+![alt text](<cas d'utilisation.jpg>)
+![alt text](UseCaseDiagram1.jpg)

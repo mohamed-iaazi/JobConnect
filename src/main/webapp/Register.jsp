@@ -64,7 +64,7 @@
             </div>
 
             <p class="text-center text-secondary">
-                Vous avez deja un compte ? <a href="login.jsp" class="text-primary">Connectez-vous</a>
+                Vous avez deja un compte ? <a href="login.jsp" class="text-primary">Connectez-Nous</a>
             </p>
 
 
