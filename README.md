@@ -75,5 +75,5 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus d'i
 
 ## Diagrammes
 
-![Use Case Diagram](diagrammes/UseCaseDiagram.jpg)
-![Sequence Diagram](diagrammes/diagramme sequence.jpg)
+![Diagramme UML](https://raw.githubusercontent.com/mohamed-iaazi/JobConnect/register/diagrammes/UseCaseDiagram.jpg)
+
