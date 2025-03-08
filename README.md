@@ -37,6 +37,11 @@ JobConnect est une plateforme web conçue pour faciliter le processus de recrute
 - **Diagramme de Cas d'Utilisation** : Illustration des interactions entre candidats, recruteurs et le système.
 - **Diagramme de Séquence** : Représentation du processus de soumission de candidature.
 
+## Diagrammes
+
+![Use Case Diagram](diagrammes/UseCaseDiagram.jpg)
+![Sequence Diagram](diagrammes/diagramme sequence.jpg)
+
 ## Technologies Utilisées 💻
 
 - **Backend** : Java EE (Servlets, Filtres, JSP, JDBC), Maven
@@ -68,6 +73,7 @@ Les contributions sont les bienvenues ! Si vous souhaitez améliorer l'applicati
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus d'informations.
 
-##LES Diagrammes
-![alt text](<cas d'utilisation.jpg>)
-![alt text](UseCaseDiagram1.jpg)
+## Diagrammes
+
+![Use Case Diagram](diagrammes/UseCaseDiagram.jpg)
+![Sequence Diagram](diagrammes/diagramme sequence.jpg)
