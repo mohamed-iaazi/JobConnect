@@ -1,4 +1,4 @@
-package model;
+package Model;
 
 import java.sql.Date;
 
@@ -7,6 +7,7 @@ public class Offer {
     private String titre;
     private String description;
     private Date date_publication;
+
 
     public Offer(int id, String titre, String description, Date date_publication) {
         this.id = id;
