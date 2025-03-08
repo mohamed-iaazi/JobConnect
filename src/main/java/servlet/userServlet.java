@@ -1,4 +1,4 @@
-package servlet;
+package Servlet;
 
 public class userServlet {
 }
