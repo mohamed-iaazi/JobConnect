@@ -5,7 +5,9 @@ CREATE TABLE User (
     Nom VARCHAR(100) NOT NULL,
     Email VARCHAR(100) UNIQUE NOT NULL,
     Telephone VARCHAR(20),
-    Password varchar(100)
+    Password varchar(100) ,
+    Role varchar(100)
+
 );
 CREATE TABLE OffreEmploi (
                              Id INT PRIMARY KEY AUTO_INCREMENT,
