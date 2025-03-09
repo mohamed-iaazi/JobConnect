@@ -1,3 +1,4 @@
+
 # JobConnect: Plateforme de Recrutement 📑
 
 JobConnect est une plateforme web conçue pour faciliter le processus de recrutement en ligne. Elle permet aux candidats de postuler à des offres d'emploi et aux recruteurs de gérer efficacement les candidatures. L'application est construite selon l'architecture MVC pour séparer les différentes responsabilités et garantir une gestion fluide des données et de l'interface utilisateur.
@@ -37,6 +38,12 @@ JobConnect est une plateforme web conçue pour faciliter le processus de recrute
 - **Diagramme de Cas d'Utilisation** : Illustration des interactions entre candidats, recruteurs et le système.
 - **Diagramme de Séquence** : Représentation du processus de soumission de candidature.
 
+### Diagramme de cas d'utilisation
+![Diagramme de cas d'utilisation](diagrammes/UseCaseDiagram.jpg)
+
+### Diagramme de séquence
+![Diagramme de séquence](diagrammes/diagramme_sequence.jpg)
+
 ## Technologies Utilisées 💻
 
 - **Backend** : Java EE (Servlets, Filtres, JSP, JDBC), Maven
@@ -67,3 +74,5 @@ Les contributions sont les bienvenues ! Si vous souhaitez améliorer l'applicati
 ## Licence 📜
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus d'informations.
+
+
