@@ -1,4 +1,4 @@
-package model;
+package Model;
 
 public class Candidate extends User  {
 
@@ -16,6 +16,10 @@ public class Candidate extends User  {
         super(id, name, email, telephone, password);
         User_Id = user_Id;
         this.cv = cv;
+    }
+
+    public Candidate( String name, String email, int telephone, String password) {
+        super( name, email, telephone, password);
     }
 
     public Candidate() {
