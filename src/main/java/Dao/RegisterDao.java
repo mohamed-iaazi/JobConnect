@@ -1,7 +1,6 @@
 package Dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import Model.User;
@@ -9,11 +8,11 @@ import Model.User;
 
 import static Utils.DatabaseConnector.getConnection;
 
-public class userDao {
+public class RegisterDao {
 
 
 
-    public userDao() {}
+    public RegisterDao() {}
 
     public boolean addUser(User user) {
         String query = "INSERT INTO user (nom,email,Telephone,password) VALUES (?, ?,?,?)";

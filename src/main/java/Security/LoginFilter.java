@@ -7,21 +7,30 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebFilter({"/Candidate.jsp" , "/Candidate"})
+@WebFilter({"/Login.jsp" , "/Login" , "/Register","/Register.jsp"})
 public class LoginFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        if (((HttpServletRequest) servletRequest).getSession(false).getAttribute("user")!=null
-                && ((HttpServletRequest) servletRequest).getSession(false).getAttribute("role").toString().equals("Candidate")) {
+        HttpServletResponse httpServletResponse = (HttpServletResponse) servletResponse;
+
+        if (((HttpServletRequest) servletRequest).getSession(false).getAttribute("user")==null) {
 
             filterChain.doFilter(servletRequest, servletResponse);
 
 
         }
         else {
-            HttpServletResponse httpServletResponse = (HttpServletResponse) servletResponse;
-            httpServletResponse.sendRedirect("Login.jsp?NoSession=0");
-        }
+
+            if (((HttpServletRequest) servletRequest).getSession(false).getAttribute("role").toString().equals("Recruteur")) {
+
+                httpServletResponse.sendRedirect("Dashboard.jsp");
+
+            }
+            else {
+                httpServletResponse.sendRedirect("Candidate.jsp");
+            }
+
         }
     }
+}
 

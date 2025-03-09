@@ -1,16 +1,24 @@
 package Model;
 
-public class Recruteur extends Users {
-      Offer offer;
+public class Recruteur extends User {
+    int id;
+    Offer offer;
 
-    public Recruteur(int id, String nom, String email, String telephone, Offer offer) {
-        super(id, nom, email, telephone);
-        this.offer = offer;
+    public Recruteur(String nom, String email, int telephone, String password) {
+        super(nom, email, telephone, password);
     }
 
-    public Recruteur(String nom, String email, String telephone, Offer offer) {
-        super(nom, email, telephone);
-        this.offer = offer;
+    public Recruteur() {
+    }
+
+    @Override
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Offer getOffer() {
@@ -19,12 +27,5 @@ public class Recruteur extends Users {
 
     public void setOffer(Offer offer) {
         this.offer = offer;
-    }
-
-    @Override
-    public String toString() {
-        return "Recruteur{" +
-                "offer=" + offer +super.toString() +
-                '}';
     }
 }

@@ -1,7 +1,8 @@
 package Controller;
 
-import Dao.userDao;
+import Dao.RegisterDao;
 import Model.Candidate;
+import Model.Recruteur;
 import Model.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -14,22 +15,33 @@ import java.io.IOException;
 @WebServlet("/userServlet")
 public class RegisterServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private Dao.userDao userDao;
+    private RegisterDao userDao;
 
     public void init() {
-        userDao = new userDao();
+        userDao = new RegisterDao();
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        User user;
         String Nom = request.getParameter("Nom");
         String Email = request.getParameter("Email");
         System.out.println(request.getParameter("Telephone"));
         int Telephone = Integer.parseInt(request.getParameter("Telephone"));
         String password = request.getParameter("password");
-       System.out.println(Telephone);
-        User user = new Candidate(Nom,Email,Telephone,password);
-        Dao.userDao userDao= new userDao();
+        String role = request.getParameter("Role");
+
+        if (role=="Recruteur") {
+
+             user = new Recruteur(Nom,Email,Telephone,password);
+        }
+        else {
+            user = new Candidate(Nom,Email,Telephone,password);
+
+        }
+
+
+        RegisterDao userDao= new RegisterDao();
         boolean ajouter;
         ajouter = userDao.addUser(user);
 

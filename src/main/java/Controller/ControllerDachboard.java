@@ -1,6 +1,6 @@
 package Controller;
 
-import Dao.DAO;
+import Dao.DashboardDao;
 import Model.Offer;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -15,11 +15,11 @@ import java.sql.SQLException;
 
 @WebServlet("/ControllerDachboard")
 public class ControllerDachboard extends HttpServlet {
-    DAO dao;
+    DashboardDao dao;
 
     @Override
     public void init() throws ServletException {
-        dao = new DAO();
+        dao = new DashboardDao();
     }
 
     @Override
