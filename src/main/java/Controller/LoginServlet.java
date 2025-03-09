@@ -22,9 +22,17 @@ public class LoginServlet extends HttpServlet {
 
         if (Login(email,password))
         {
-            HttpSession session = request.getSession(false);
+            HttpSession session = request.getSession(true);
             session.setAttribute("user", email);
-            response.sendRedirect("index.jsp");
+//            session.setAttribute("role", "Candidate");
+            session.setAttribute("role", "Recruteur");
+
+            if (session.getAttribute("role").toString().equals("Candidate")) {
+                response.sendRedirect("Candidate.jsp");
+            }
+            else  {
+                response.sendRedirect("Dashboard.jsp");
+            }
 
         }
         else {
