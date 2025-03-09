@@ -39,10 +39,12 @@ JobConnect est une plateforme web conçue pour faciliter le processus de recrute
 - **Diagramme de Séquence** : Représentation du processus de soumission de candidature.
 
 ### Diagramme de cas d'utilisation
-![Diagramme de cas d'utilisation](diagrammes/UseCaseDiagram.jpg)
+![UseCaseDiagram](https://github.com/user-attachments/assets/193f5b5c-19bd-4d71-9597-96df307d601d)
+
 
 ### Diagramme de séquence
-![Diagramme de séquence](diagrammes/diagramme_sequence.jpg)
+![diagramme_sequence](https://github.com/user-attachments/assets/8c23477f-1549-4bd1-85ea-5e1edbbe0731)
+
 
 ## Technologies Utilisées 💻
 
