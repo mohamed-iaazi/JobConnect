@@ -21,6 +21,11 @@ public class Recruteur extends User {
         this.id = id;
     }
 
+    @Override
+    public String getRole() {
+        return "Recruteur";
+    }
+
     public Offer getOffer() {
         return offer;
     }

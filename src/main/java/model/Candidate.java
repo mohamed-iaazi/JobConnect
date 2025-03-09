@@ -35,6 +35,11 @@ public class Candidate extends User  {
         this.id = id;
     }
 
+    @Override
+    public String getRole() {
+        return "Candidate";
+    }
+
     public String getCv() {
         return cv;
     }

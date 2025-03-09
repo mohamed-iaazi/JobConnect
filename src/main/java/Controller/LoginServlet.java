@@ -10,6 +10,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
+import static Dao.LoginDao.FountTheUserRole;
 import static Dao.LoginDao.Login;
 
 
@@ -20,12 +21,12 @@ public class LoginServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
-        if (Login(email,password))
+        if (Login(email,password)!=0)
         {
+            String role=FountTheUserRole(Login(email,password));
             HttpSession session = request.getSession(true);
             session.setAttribute("user", email);
-//            session.setAttribute("role", "Candidate");
-            session.setAttribute("role", "Recruteur");
+            session.setAttribute("role", role);
 
             if (session.getAttribute("role").toString().equals("Candidate")) {
                 response.sendRedirect("Candidate.jsp");
