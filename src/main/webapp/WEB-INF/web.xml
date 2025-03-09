@@ -8,13 +8,8 @@
 
   <display-name>offer</display-name>
 
-  <servlet-mapping>
-    <servlet-name>CandidateServlet</servlet-name>
-    <url-pattern>/CandidateServlet</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>CandidateServlet</servlet-name>
-    <servlet-class>Controller.CandidateServlet</servlet-class>
-  </servlet>
 
+<welcome-file-list>
+  <welcome-file>Register.jsp</welcome-file>
+</welcome-file-list>
 </web-app>

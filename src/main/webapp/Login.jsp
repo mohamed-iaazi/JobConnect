@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - JOBCONNECT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
         body {
@@ -63,10 +64,16 @@
                     </form>
                     <div class="text-center mt-3">
                         <p>ou</p>
-                        <button class="btn btn-outline-dark w-100 mb-2">Connectez-vous avec Google</button>
-                        <button class="btn btn-outline-dark w-100">Connectez-vous avec Apple</button>
+                        <div class="d-flex justify-content-center gap-3">
+                            <button class="btn btn-outline-secondary d-flex align-items-center">
+                                <i class="fab fa-google text-danger me-2"></i> Google
+                            </button>
+                            <button class="btn btn-outline-secondary d-flex align-items-center">
+                                <i class="fab fa-apple text-dark me-2"></i> Apple
+                            </button>
+                        </div>
                     </div>
-                    <p class="text-center mt-3">Vous n'avez pas de compte ? <a href="register.jsp">Inscrivez-vous</a></p>
+                    <p class="text-center mt-3">Vous n'avez pas de compte ? <a href="Register.jsp">Inscrivez-vous</a></p>
                 </div>
             </div>
             <div class="col-md-6 image-container">

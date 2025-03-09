@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.sql.Date;
 import java.sql.SQLException;
 
-@WebServlet("/t")
+@WebServlet("/ControllerDachboard")
 public class ControllerDachboard extends HttpServlet {
     DAO dao;
 
