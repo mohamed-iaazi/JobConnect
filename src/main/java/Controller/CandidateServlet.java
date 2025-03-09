@@ -1,7 +1,7 @@
 package Controller;
 
+import Dao.CandidateDao;
 import Model.Offer;
-import dao.CandidateDao;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
