@@ -23,7 +23,6 @@ public class userServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         String Nom = request.getParameter("Nom");
         String Email = request.getParameter("Email");
         System.out.println(request.getParameter("Telephone"));
@@ -31,8 +30,6 @@ public class userServlet extends HttpServlet {
         String password = request.getParameter("password");
        System.out.println(Telephone);
         User user = new Candidate(Nom,Email,Telephone,password);
-
-
         Dao.userDao userDao= new userDao();
         boolean ajouter;
         ajouter = userDao.addUser(user);
@@ -42,7 +39,7 @@ public class userServlet extends HttpServlet {
             request.getSession().setAttribute("user", user.getName());
             response.sendRedirect("Candidate.jsp");
         } else {
-            response.sendRedirect("login.jsp?error=true");
+            response.sendRedirect("Register.jsp?error=true");
         }
 
 

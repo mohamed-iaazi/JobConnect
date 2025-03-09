@@ -10,24 +10,15 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import static Utils.DatabaseConnector.getConnection;
+
 public class DAO {
-    private String jdbcURL = "jdbc:mysql://localhost:3306/connectjob?allowPublicKeyRetrieval=true&useSSL=false";
-    private String jdbcUsername = "root";
-    private String jdbcPassword = "admin";
+
 
     private static final String Insert_Offers = "INSERT INTO OffreEmploi (Description, Date, Titre) VALUES(?,?,?)";
     public DAO() {}
 
-    protected Connection getConnection() {
-        Connection connection = null;
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
-        } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        return connection;
-    }
+
     public void AjouterOffers(Offer offer) {
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(Insert_Offers)) {
