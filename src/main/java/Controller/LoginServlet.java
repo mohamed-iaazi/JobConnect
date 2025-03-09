@@ -1,7 +1,6 @@
-package Servlet;
+package Controller;
 
 
-import Dao.LoginDao;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

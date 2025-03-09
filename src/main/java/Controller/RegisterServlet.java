@@ -1,4 +1,4 @@
-package Servlet;
+package Controller;
 
 import Dao.userDao;
 import Model.Candidate;
@@ -10,10 +10,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 @WebServlet("/userServlet")
-public class userServlet extends HttpServlet {
+public class RegisterServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private Dao.userDao userDao;
 
