@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 
 import static Utils.DatabaseConnector.getConnection;
 
-public class LoginDao {
+public class Logindao {
 
     public static int Login(String email, String password) {
 

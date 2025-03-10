@@ -30,7 +30,7 @@
                <h3>Emplois</h3>
            </div>
            <div class="col-lg-3">
-               <a href="offers" class="btn btn-primary">Publier une annonce</a>
+               <a href="offer" class="btn btn-primary">Publier une annonce</a>
            </div>
        </div>
    </div>

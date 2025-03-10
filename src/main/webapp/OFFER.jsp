@@ -34,7 +34,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <form action="insertOffers" method="post">
+                        <form action="offer" method="post">
                             <div class="form-group">
                                 <label for="Description"> Description</label>
                                 <textarea class="form-control" name="Description" id="Description" rows="3" placeholder="Saisze  Description"></textarea>

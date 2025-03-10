@@ -10,8 +10,8 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-import static Dao.LoginDao.FountTheUserRole;
-import static Dao.LoginDao.Login;
+import static Dao.Logindao.FountTheUserRole;
+import static Dao.Logindao.Login;
 
 
 @WebServlet("/LoginServlet")
