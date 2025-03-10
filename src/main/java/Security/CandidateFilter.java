@@ -2,26 +2,27 @@ package Security;
 
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
+import jakarta.servlet.http.*;
+
+import java.io.IOException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import java.io.IOException;
 
-@WebFilter({"/Candidate.jsp" , "/Candidate"})
+@WebFilter({"/Candidate.jsp", "/Candidate"})
 public class CandidateFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        if (((HttpServletRequest) servletRequest).getSession(false).getAttribute("user")!=null
-                && ((HttpServletRequest) servletRequest).getSession(false).getAttribute("role").toString().equals("Candidate")) {
+        HttpServletRequest request = (HttpServletRequest) servletRequest;
+        HttpServletResponse response = (HttpServletResponse) servletResponse;
 
-            filterChain.doFilter(servletRequest, servletResponse);
+        // Get existing session without creating a new one
+        HttpSession session = request.getSession(false);
 
-
-        }
-        else {
-            HttpServletResponse httpServletResponse = (HttpServletResponse) servletResponse;
-            httpServletResponse.sendRedirect("Login.jsp?NoAccess=true");
-        }
+        if (session != null && "Candidate".equals(session.getAttribute("role"))) {
+            filterChain.doFilter(servletRequest, servletResponse); // Allow access
+        } else {
+            response.sendRedirect("Login.jsp?NoAccess=true"); // Redirect to login if unauthorized
         }
     }
-
+}

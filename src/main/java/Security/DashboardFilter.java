@@ -5,6 +5,7 @@ import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
@@ -12,10 +13,19 @@ import java.io.IOException;
 public class DashboardFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        if (((HttpServletRequest) servletRequest).getSession(false).getAttribute("user")!=null
-                && ((HttpServletRequest) servletRequest).getSession(false).getAttribute("role").toString().equals("Recruteur")) {
+        HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
+        HttpSession session = httpServletRequest.getSession();
 
-            filterChain.doFilter(servletRequest, servletResponse);
+        if (session!=null && session.getAttribute("role") != null) {
+
+            if ( session.getAttribute("role").toString().equals("Recruteur")) {
+
+                filterChain.doFilter(servletRequest, servletResponse);
+            }
+            else  {
+                HttpServletResponse httpServletResponse = (HttpServletResponse) servletResponse;
+                httpServletResponse.sendRedirect("Login.jsp?NoAccess=true");
+            }
 
 
         }

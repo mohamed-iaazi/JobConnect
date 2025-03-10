@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("user", email);
             session.setAttribute("role", role);
 
-            if (session.getAttribute("role").toString().equals("Candidate")) {
+            if (role==("Candidate")) {
                 response.sendRedirect("Candidate.jsp");
             }
             else  {

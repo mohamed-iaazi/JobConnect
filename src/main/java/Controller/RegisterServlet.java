@@ -11,6 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.Objects;
 
 @WebServlet("/userServlet")
 public class RegisterServlet extends HttpServlet {
@@ -30,8 +31,9 @@ public class RegisterServlet extends HttpServlet {
         int Telephone = Integer.parseInt(request.getParameter("Telephone"));
         String password = request.getParameter("password");
         String role = request.getParameter("Role");
+        System.out.println(role);
 
-        if (role=="Recruteur") {
+        if (Objects.equals(role, "Recruteur")) {
 
              user = new Recruteur(Nom,Email,Telephone,password);
         }
@@ -48,7 +50,16 @@ public class RegisterServlet extends HttpServlet {
 
         if (ajouter) {
             request.getSession().setAttribute("user", user.getName());
-            response.sendRedirect("Candidate.jsp");
+            request.getSession().setAttribute("role", user.getRole());
+
+            if (role.equals("Recruteur")) {
+                response.sendRedirect("Dashboard.jsp");
+
+            }
+            else {
+                response.sendRedirect("Candidate.jsp");
+            }
+
         } else {
             response.sendRedirect("Register.jsp?error=true");
         }
