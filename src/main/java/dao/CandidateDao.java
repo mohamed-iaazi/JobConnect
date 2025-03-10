@@ -11,23 +11,12 @@ import static Utils.DatabaseConnector.getConnection;
 public class CandidateDao {
 
 
-    // Méthode pour fermer la connexion
-    public static void closeConnection(Connection connection) {
-        if (connection != null) {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
     public static List<Offer> getListOffer() {
 
         // using try-with-resources to avoid closing resources (boiler plate code)
         List<Offer> Offer = new ArrayList<>();
         // Step 1: Establishing a Connection
-        String SELECT_ALL_LIST="select * from OffreEmploi";
+        String SELECT_ALL_LIST="select * from offreemploi";
         try (Connection connection = getConnection();
 
              // Step 2:Create a statement using connection object
@@ -46,6 +35,7 @@ public class CandidateDao {
 
             }
         } catch (SQLException e) {
+            System.out.println(e.getMessage()+"errour");
         }
         System.out.print("list of in method ");
 

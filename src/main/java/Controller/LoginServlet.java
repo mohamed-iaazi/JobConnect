@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.util.Objects;
 
 import static Dao.Logindao.FountTheUserRole;
 import static Dao.Logindao.Login;
@@ -28,8 +29,8 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("user", email);
             session.setAttribute("role", role);
 
-            if (role==("Candidate")) {
-                response.sendRedirect("Candidate.jsp");
+            if (Objects.equals(role, "Candidate")) {
+                response.sendRedirect("CandidateServlet");
             }
             else  {
                 response.sendRedirect("Dashboard.jsp");

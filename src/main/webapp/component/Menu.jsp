@@ -26,7 +26,7 @@
 
 
         <section class="offre">
-          <%@include file="../component/OffreList.jsp"%>
+          <%@include file="OffreList.jsp"%>
         </section>
 
   </div>

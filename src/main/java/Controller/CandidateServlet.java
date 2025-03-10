@@ -27,8 +27,8 @@ public class CandidateServlet  extends HttpServlet {
     private void listProduit(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
         List<Offer> listOffer = CandidateDao.getListOffer();
-        RequestDispatcher dispatcher = request.getRequestDispatcher("Candidate.jsp");
+     RequestDispatcher dispatcher = request.getRequestDispatcher("Candidate.jsp");
         request.setAttribute("listOffer", listOffer);
-        dispatcher.forward(request, response);
+       dispatcher.forward(request, response);
     }
 }

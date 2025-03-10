@@ -24,6 +24,7 @@
 <body id="body-pd">
 <%@include file="component/Menu.jsp"%>
 
+
 <!-- The Search Bar For Offre -->
 <script >
     document.addEventListener("DOMContentLoaded", function(event) {

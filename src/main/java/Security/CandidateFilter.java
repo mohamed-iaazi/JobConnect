@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 
-@WebFilter({"/Candidate.jsp", "/Candidate"})
+@WebFilter({"/Candidate.jsp", "/Candidate","/CandidateServlet"})
 public class CandidateFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
