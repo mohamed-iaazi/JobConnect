@@ -2,15 +2,14 @@ package dao;
 
 
 
-import model.Offer;
-import model.Recruteur;
-import model.Users;
+import model.Offer2;
+import model.Recruteur2;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DAO {
+public class DAO2 {
     private String jdbcURL = "jdbc:mysql://localhost:3306/connectjob?allowPublicKeyRetrieval=true&useSSL=false";
     private String jdbcUsername = "root";
     private String jdbcPassword = "admin";
@@ -22,7 +21,7 @@ public class DAO {
     private static final String Select_Offers = "select * from OffreEmploi;";
 
 
-    public DAO() {}
+    public DAO2() {}
 
     protected Connection getConnection() {
         Connection connection = null;
@@ -34,7 +33,7 @@ public class DAO {
         }
         return connection;
     }
-    public void AjouterOffers(Offer offer) {
+    public void AjouterOffers(Offer2 offer) {
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(Insert_Offers)) {
 
@@ -48,7 +47,7 @@ public class DAO {
         }
 
     }
-    public void AjouterUser(Recruteur recruteur) {
+    public void AjouterUser(Recruteur2 recruteur) {
 
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(Insert_Users, Statement.RETURN_GENERATED_KEYS)) {
@@ -76,7 +75,7 @@ public class DAO {
         }
     }
 
-    public void AjouterRecruteur(Recruteur recruteur) {
+    public void AjouterRecruteur(Recruteur2 recruteur) {
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(Insert_Recruteur)) {
 
@@ -87,15 +86,15 @@ public class DAO {
         }
 
     }
-    public List<Recruteur> SelectAllRectruteurs() {
-        List<Recruteur> recruteurs = new ArrayList<>();
+    public List<Recruteur2> SelectAllRectruteurs() {
+        List<Recruteur2> recruteurs = new ArrayList<>();
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(Select_Recruteur);
              ResultSet rs = preparedStatement.executeQuery()) {
             while (rs.next()) {
 
                 int id = rs.getInt("id");
-                recruteurs.add(new Recruteur(id));
+                recruteurs.add(new Recruteur2(id));
                 System.out.println("testmodel");
 
             }
@@ -106,8 +105,8 @@ public class DAO {
 
         return recruteurs;
     }
-    public List<Offer> SelectAllOffers() {
-        List<Offer> offers = new ArrayList<>();
+    public List<Offer2> SelectAllOffers() {
+        List<Offer2> offers = new ArrayList<>();
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(Select_Offers);
              ResultSet rs = preparedStatement.executeQuery()) {
@@ -120,7 +119,7 @@ public class DAO {
 
                 String Titre = rs.getString("Titre");
                 int id_Recruteur = rs.getInt("Id_Recruteur");
-                offers.add(new Offer(id,Description,Titre,dt,id_Recruteur));
+                offers.add(new Offer2(id,Description,Titre,dt,id_Recruteur));
 
 
 

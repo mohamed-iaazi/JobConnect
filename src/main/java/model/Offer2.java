@@ -2,14 +2,14 @@ package model;
 
 import java.sql.Date;
 
-public class Offer {
+public class Offer2 {
     private int id;
     private String titre;
     private String description;
     private Date date_publication;
     private int Id_Recruteur;
 
-    public Offer(int id, String titre, String description, Date date_publication, int id_Recruteur) {
+    public Offer2(int id, String titre, String description, Date date_publication, int id_Recruteur) {
         this.id = id;
         this.titre = titre;
         this.description = description;
@@ -17,7 +17,7 @@ public class Offer {
         Id_Recruteur = id_Recruteur;
     }
 
-    public Offer(String titre, String description, Date date_publication, int id_Recruteur) {
+    public Offer2(String titre, String description, Date date_publication, int id_Recruteur) {
         this.titre = titre;
         this.description = description;
         this.date_publication = date_publication;

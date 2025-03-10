@@ -1,11 +1,12 @@
-<%@ page import="model.Offer" %>
+<%@ page import="model.Recruteur2" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JOBCONNECT-DASHBORD</title>
+    <title>JOBCONNECT-OFFERS</title>
     <style><%@include file="css/style.css"%></style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
@@ -21,8 +22,8 @@
     <nav class="nav">
         <div> <a href="#" class="nav_logo"> </i> <span class="nav_logo-name"><img style="width: 130px;" src="https://images2.imgbox.com/70/8e/0EuyS7AG_o.png" alt=""></span> </a>
             <div class="nav_list">
-                <a href="./" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a>
-                <a href="offers" class="nav_link "> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Créer Emploi</span> </a>
+                <a href="./" class="nav_link "> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a>
+                <a href="offers" class="nav_link active"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Créer Emploi</span> </a>
                 <a href="Recruteur" class="nav_link "> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Recruteur</span> </a> </div>
         </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
 
@@ -30,35 +31,56 @@
 </div>
 <!--Container Main start-->
 <div class="height-100 bg-light">
-   <div class="container">
-       <div class="row">
-           <div class="col-lg-9">
-               <h3>Emplois</h3>
-           </div>
-           <div class="col-lg-3">
-               <a href="offers" class="btn btn-primary">Publier une annonce</a>
-           </div>
-       </div>
-   </div>
     <div class="container">
         <div class="row">
-            <%
-                List<Offer> offers = (List<Offer>) request.getAttribute("offers");
-                for(Offer offer : offers){
+
+            <div class="container bg-lightt shadow ">
+                <div class="row">
 
 
-            %>
-            <div class="col-lg-4">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title"><%= offer.getTitre()%></h5>
-                        <h6 class="card-subtitle mb-2 text-muted"><%= offer.getDescription()%></h6>
-                        <p class="card-text"><%= offer.getDate_publication()%></p>
+
+
+                    <div class="col-lg-7 ">
+                        <form action="insertOffers" method="post">
+                            <h3>Ajouter les informations de base</h3>
+                            <hr>
+                            <%
+                                List<Recruteur2> recruteurs = (List<Recruteur2>) request.getAttribute("recruteurs");
+                                for(Recruteur2 recruteur : recruteurs){
+
+
+                            %>
+                           <input type="hidden" name="Id_Recruteur" value="<%= recruteur.getId()%>" />
+
+                            <% } %>
+                            <hr>
+                            <div class="form-group">
+                                <textarea class="form-control shadow" name="Description" id="Description" rows="3" placeholder="Saisze  Description"></textarea>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <input type="date" class="form-control shadow" name="date" id="date">
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <input type="text" name="titre" class="form-control shadow" id="Titre" placeholder="Saisze  Titre">
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary mb-2 shadow">Confirm <i class="bi bi-arrow-right"></i></button>
+
+                            </div>
+
+
+                        </form>
                     </div>
+                    <div class="col-lg-5">
+                        <img src="https://images2.imgbox.com/07/3b/43K9f42n_o.png" style="width: 95%;" alt="" />
+
+                    </div>
+
                 </div>
             </div>
-            <% } %>
-
         </div>
     </div>
 </div>

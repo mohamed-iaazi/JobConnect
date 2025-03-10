@@ -1,14 +1,14 @@
 package Controller;
 
-import dao.DAO;
+import dao.DAO2;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.Offer;
-import model.Recruteur;
+import model.Offer2;
+import model.Recruteur2;
 
 import java.io.IOException;
 import java.sql.Date;
@@ -16,12 +16,12 @@ import java.sql.SQLException;
 import java.util.List;
 
 @WebServlet("/")
-public class ControllerDachboard extends HttpServlet {
-    DAO dao;
+public class ControllerDachboard2 extends HttpServlet {
+    DAO2 dao;
 
     @Override
     public void init() throws ServletException {
-        dao = new DAO();
+        dao = new DAO2();
     }
 
     @Override
@@ -57,18 +57,18 @@ public class ControllerDachboard extends HttpServlet {
     }
     private void Dashbord(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
-        List<Offer> offers = dao.SelectAllOffers();
+        List<Offer2> offers = dao.SelectAllOffers();
         request.setAttribute("offers", offers);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("Dashboard.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("Dashboard1.jsp");
 
         dispatcher.forward(request, response);
 
     }
     private void OFFERS(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
-        List<Recruteur> recruteurs = dao.SelectAllRectruteurs();
+        List<Recruteur2> recruteurs = dao.SelectAllRectruteurs();
         request.setAttribute("recruteurs", recruteurs);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("OFFER.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("OFFER1.jsp");
 
         dispatcher.forward(request, response);
 
@@ -88,7 +88,7 @@ public class ControllerDachboard extends HttpServlet {
         String titre = request.getParameter("titre");
         Date dt = Date.valueOf(date);
 
-        Offer offer = new Offer(titre,Description, dt,Id_Recruteur);
+        Offer2 offer = new Offer2(titre,Description, dt,Id_Recruteur);
         dao.AjouterOffers(offer);
 
 
@@ -101,7 +101,7 @@ public class ControllerDachboard extends HttpServlet {
             String email = request.getParameter("email");
             String telephone = request.getParameter("telephone");
 
-            Recruteur rec = new Recruteur(nom, email, telephone);
+            Recruteur2 rec = new Recruteur2(nom, email, telephone);
 
             dao.AjouterUser(rec);
             if (rec.getId() > 0) {
