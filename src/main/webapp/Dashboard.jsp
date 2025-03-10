@@ -1,9 +1,11 @@
+<%@ page import="model.Offer" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JOBCONNECT-DASHBORD</title>
     <style><%@include file="css/style.css"%></style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
@@ -18,8 +20,12 @@
 <div class="l-navbar" id="nav-bar">
     <nav class="nav">
         <div> <a href="#" class="nav_logo"> </i> <span class="nav_logo-name"><img style="width: 130px;" src="https://images2.imgbox.com/70/8e/0EuyS7AG_o.png" alt=""></span> </a>
-            <div class="nav_list"> <a href="#" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> <a href="#" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Users</span> </a> <a href="#" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Messages</span> </a> <a href="#" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Bookmark</span> </a> <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Files</span> </a> <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a> </div>
+            <div class="nav_list">
+                <a href="./" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a>
+                <a href="offers" class="nav_link "> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Créer Emploi</span> </a>
+                <a href="Recruteur" class="nav_link "> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Recruteur</span> </a> </div>
         </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+
     </nav>
 </div>
 <!--Container Main start-->
@@ -34,6 +40,27 @@
            </div>
        </div>
    </div>
+    <div class="container">
+        <div class="row">
+            <%
+                List<Offer> offers = (List<Offer>) request.getAttribute("offers");
+                for(Offer offer : offers){
+
+
+            %>
+            <div class="col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= offer.getTitre()%></h5>
+                        <h6 class="card-subtitle mb-2 text-muted"><%= offer.getDescription()%></h6>
+                        <p class="card-text"><%= offer.getDate_publication()%></p>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+
+        </div>
+    </div>
 </div>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {

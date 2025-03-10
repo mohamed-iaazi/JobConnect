@@ -5,18 +5,24 @@ public abstract class Users {
     private String nom;
     private String email;
     private String telephone;
+    private String password;
 
-    public Users(int id, String nom, String email, String telephone) {
+    public Users(int id, String nom, String email, String telephone, String password) {
         this.id = id;
         this.nom = nom;
         this.email = email;
         this.telephone = telephone;
+        this.password = password;
     }
 
     public Users(String nom, String email, String telephone) {
         this.nom = nom;
         this.email = email;
         this.telephone = telephone;
+    }
+
+    public Users(int id) {
+        this.id = id;
     }
 
     public int getId() {
@@ -51,6 +57,14 @@ public abstract class Users {
         this.telephone = telephone;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String toString() {
         return "Users{" +
@@ -58,6 +72,7 @@ public abstract class Users {
                 ", nom='" + nom + '\'' +
                 ", email='" + email + '\'' +
                 ", telephone='" + telephone + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }

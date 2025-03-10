@@ -7,18 +7,21 @@ public class Offer {
     private String titre;
     private String description;
     private Date date_publication;
+    private int Id_Recruteur;
 
-    public Offer(int id, String titre, String description, Date date_publication) {
+    public Offer(int id, String titre, String description, Date date_publication, int id_Recruteur) {
         this.id = id;
         this.titre = titre;
         this.description = description;
         this.date_publication = date_publication;
+        Id_Recruteur = id_Recruteur;
     }
 
-    public Offer(String titre, String description, Date date_publication) {
+    public Offer(String titre, String description, Date date_publication, int id_Recruteur) {
         this.titre = titre;
         this.description = description;
         this.date_publication = date_publication;
+        Id_Recruteur = id_Recruteur;
     }
 
     public int getId() {
@@ -53,6 +56,14 @@ public class Offer {
         this.date_publication = date_publication;
     }
 
+    public int getId_Recruteur() {
+        return Id_Recruteur;
+    }
+
+    public void setId_Recruteur(int id_Recruteur) {
+        Id_Recruteur = id_Recruteur;
+    }
+
     @Override
     public String toString() {
         return "Offer{" +
@@ -60,6 +71,7 @@ public class Offer {
                 ", titre='" + titre + '\'' +
                 ", description='" + description + '\'' +
                 ", date_publication=" + date_publication +
+                ", Id_Recruteur=" + Id_Recruteur +
                 '}';
     }
 }

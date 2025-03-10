@@ -1,7 +1,4 @@
-<%@ page import="model.Recruteur" %>
-<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,6 +7,7 @@
     <style><%@include file="css/style.css"%></style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 </head>
@@ -23,8 +21,8 @@
         <div> <a href="#" class="nav_logo"> </i> <span class="nav_logo-name"><img style="width: 130px;" src="https://images2.imgbox.com/70/8e/0EuyS7AG_o.png" alt=""></span> </a>
             <div class="nav_list">
                 <a href="./" class="nav_link "> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a>
-                <a href="offers" class="nav_link active"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Créer Emploi</span> </a>
-                <a href="Recruteur" class="nav_link "> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Recruteur</span> </a> </div>
+                <a href="offers" class="nav_link "> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Créer Emploi</span> </a>
+                <a href="Recruteur" class="nav_link active"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Recruteur</span> </a> </div>
         </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
 
     </nav>
@@ -41,31 +39,20 @@
 
 
                     <div class="col-lg-7 ">
-                        <form action="insertOffers" method="post">
-                            <h3>Ajouter les informations de base</h3>
-                            <hr>
-                            <%
-                                List<Recruteur> recruteurs = (List<Recruteur>) request.getAttribute("recruteurs");
-                                for(Recruteur recruteur : recruteurs){
-
-
-                            %>
-                           <input type="hidden" name="Id_Recruteur" value="<%= recruteur.getId()%>" />
-
-                            <% } %>
-                            <hr>
-                            <div class="form-group">
-                                <textarea class="form-control shadow" name="Description" id="Description" rows="3" placeholder="Saisze  Description"></textarea>
+                        <form action="createAccount" method="post">
+                            <div class="alert alert-danger" role="alert">
+                                Comme vous n'avez jamais publié d'offre d'emploi, vous devrez créer un compte employeur.
                             </div>
                             <hr>
-                            <div class="form-group">
-                                <input type="date" class="form-control shadow" name="date" id="date">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="nom" id="Nom" placeholder="Enter votre nom">
                             </div>
-                            <hr>
-                            <div class="form-group">
-                                <input type="text" name="titre" class="form-control shadow" id="Titre" placeholder="Saisze  Titre">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" name="email" id="Email" placeholder="Enter Votre Email">
                             </div>
-                            <hr>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="telephone" id="Telephone" placeholder="Enter Votre Telephone">
+                            </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary mb-2 shadow">Confirm <i class="bi bi-arrow-right"></i></button>
 
@@ -75,7 +62,7 @@
                         </form>
                     </div>
                     <div class="col-lg-5">
-                        <img src="https://images2.imgbox.com/07/3b/43K9f42n_o.png" style="width: 95%;" alt="" />
+                        <img src="https://images2.imgbox.com/b3/c9/PGgafpNd_o.png" style="width: 95%;" alt="" />
 
                     </div>
 
