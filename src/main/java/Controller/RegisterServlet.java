@@ -9,7 +9,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 import java.io.IOException;
 import java.util.Objects;
 
@@ -44,12 +43,12 @@ public class RegisterServlet extends HttpServlet {
 
 
         RegisterDao userDao= new RegisterDao();
-        boolean ajouter;
-        ajouter = userDao.addUser(user);
 
 
-        if (ajouter) {
+
+        if (userDao.addUser(user)>0) {
             request.getSession().setAttribute("user", user.getName());
+            request.getSession().setAttribute("userid", userDao.addUser(user));
             request.getSession().setAttribute("role", user.getRole());
 
             if (role.equals("Recruteur")) {
@@ -57,7 +56,7 @@ public class RegisterServlet extends HttpServlet {
 
             }
             else {
-                response.sendRedirect("Candidate.jsp");
+                response.sendRedirect("CandidateServlet");
             }
 
         } else {

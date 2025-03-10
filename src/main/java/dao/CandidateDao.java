@@ -27,11 +27,12 @@ public class CandidateDao {
 
             // Step 4: Process the ResultSet object.
             while (rs.next()) {
+                int id = rs.getInt("id");
                 String name = rs.getString("Titre");
                 String description = rs.getString("Description");
                 Date date = rs.getDate("Date");
 
-                Offer.add(new Offer( name, description,date));
+                Offer.add(new Offer(id, name, description,date));
 
             }
         } catch (SQLException e) {

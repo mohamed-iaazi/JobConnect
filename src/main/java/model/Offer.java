@@ -22,6 +22,10 @@ public class Offer {
         this.date_publication = date_publication;
     }
 
+    public  Offer(){
+
+    }
+
     public int getId() {
         return id;
     }

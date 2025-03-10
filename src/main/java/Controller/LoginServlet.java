@@ -28,6 +28,8 @@ public class LoginServlet extends HttpServlet {
             HttpSession session = request.getSession(true);
             session.setAttribute("user", email);
             session.setAttribute("role", role);
+            session.setAttribute("userid",Login(email,password));
+
 
             if (Objects.equals(role, "Candidate")) {
                 response.sendRedirect("CandidateServlet");

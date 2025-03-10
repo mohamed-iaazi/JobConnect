@@ -1,4 +1,4 @@
-<%--
+<%@ page import="Model.Offer" %><%--
   Created by IntelliJ IDEA.
   User: iaazi
   Date: 05/03/2025
@@ -7,8 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
-
-
     <div class="container">
     <div class="row">
         <div class="col-lg-10 mx-auto mb-4">
@@ -18,11 +16,9 @@
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="col-lg-10 mx-auto">
             <div class="career-search mb-60">
-
                 <form action="#" class="career-form mb-60">
                     <div class="row">
                         <div class="col-md-6 col-lg-3 my-3">
@@ -83,10 +79,11 @@
                    <div class="job-right my-4 flex-shrink-0">
                        <button
                                class="btn d-block w-100 d-sm-inline-block btn-success apply-btn"
-                               onclick="applyJob(this)"
-                               onselect="applyJob(this)"
                        >
-                           Apply now
+                           <a style="text-decoration: none" class="text-light " href="PostToOffer?offerId=${offer.id}">
+                               Apply now
+
+                           </a>
                        </button>
                    </div>
 
