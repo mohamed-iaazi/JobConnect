@@ -154,6 +154,9 @@ label{
 .bg-light .container{
     padding-top: 87px;
 }
+.bg-lightt{
+    background-color: #f7f6fb;
+}
 
 @media screen and (min-width: 768px) {
     body {
