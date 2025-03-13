@@ -18,6 +18,7 @@ CREATE TABLE OffreEmploi (
                              FOREIGN KEY (Id_Recruteur) REFERENCES Recruteur(Id) ON DELETE SET NULL
 );
 
+
 CREATE TABLE Recruteur (
                            Id INT PRIMARY KEY AUTO_INCREMENT,
                            OffreEmploi INT default 0,
