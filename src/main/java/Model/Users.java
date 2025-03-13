@@ -1,13 +1,13 @@
-package model;
+package Model;
 
-public abstract class Users2 {
+public abstract class Users {
     private int id;
     private String nom;
     private String email;
     private String telephone;
     private String password;
 
-    public Users2(int id, String nom, String email, String telephone, String password) {
+    public Users(int id, String nom, String email, String telephone, String password) {
         this.id = id;
         this.nom = nom;
         this.email = email;
@@ -15,13 +15,13 @@ public abstract class Users2 {
         this.password = password;
     }
 
-    public Users2(String nom, String email, String telephone) {
+    public Users(String nom, String email, String telephone) {
         this.nom = nom;
         this.email = email;
         this.telephone = telephone;
     }
 
-    public Users2(int id) {
+    public Users(int id) {
         this.id = id;
     }
 

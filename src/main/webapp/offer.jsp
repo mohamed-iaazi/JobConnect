@@ -1,4 +1,4 @@
-<%@ page import="model.Recruteur2" %>
+<%@ page import="Model.Recruteur" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
@@ -45,8 +45,8 @@
                             <h3>Ajouter les informations de base</h3>
                             <hr>
                             <%
-                                List<Recruteur2> recruteurs = (List<Recruteur2>) request.getAttribute("recruteurs");
-                                for(Recruteur2 recruteur : recruteurs){
+                                List<Recruteur> recruteurs = (List<Recruteur>) request.getAttribute("recruteurs");
+                                for(Recruteur recruteur : recruteurs){
 
 
                             %>

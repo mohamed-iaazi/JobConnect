@@ -1,4 +1,4 @@
-<%@ page import="model.Offer2" %>
+<%@ page import="Model.Offer" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
@@ -43,8 +43,8 @@
     <div class="container">
         <div class="row">
             <%
-                List<Offer2> offers = (List<Offer2>) request.getAttribute("offers");
-                for(Offer2 offer : offers){
+                List<Offer> offers = (List<Offer>) request.getAttribute("offers");
+                for(Offer offer : offers){
 
 
             %>

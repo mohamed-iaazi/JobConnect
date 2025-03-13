@@ -1,9 +1,9 @@
-package dao;
+package Dao;
 
 
 
-import model.Offer2;
-import model.Recruteur2;
+import Model.Offer;
+import Model.Recruteur;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ public class DAO2 {
         }
         return connection;
     }
-    public void AjouterOffers(Offer2 offer) {
+    public void AjouterOffers(Offer offer) {
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(Insert_Offers)) {
 
@@ -47,7 +47,7 @@ public class DAO2 {
         }
 
     }
-    public void AjouterUser(Recruteur2 recruteur) {
+    public void AjouterUser(Recruteur recruteur) {
 
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(Insert_Users, Statement.RETURN_GENERATED_KEYS)) {
@@ -75,7 +75,7 @@ public class DAO2 {
         }
     }
 
-    public void AjouterRecruteur(Recruteur2 recruteur) {
+    public void AjouterRecruteur(Recruteur recruteur) {
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(Insert_Recruteur)) {
 
@@ -86,15 +86,15 @@ public class DAO2 {
         }
 
     }
-    public List<Recruteur2> SelectAllRectruteurs() {
-        List<Recruteur2> recruteurs = new ArrayList<>();
+    public List<Recruteur> SelectAllRectruteurs() {
+        List<Recruteur> recruteurs = new ArrayList<>();
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(Select_Recruteur);
              ResultSet rs = preparedStatement.executeQuery()) {
             while (rs.next()) {
 
                 int id = rs.getInt("id");
-                recruteurs.add(new Recruteur2(id));
+                recruteurs.add(new Recruteur(id));
                 System.out.println("testmodel");
 
             }
@@ -105,8 +105,8 @@ public class DAO2 {
 
         return recruteurs;
     }
-    public List<Offer2> SelectAllOffers() {
-        List<Offer2> offers = new ArrayList<>();
+    public List<Offer> SelectAllOffers() {
+        List<Offer> offers = new ArrayList<>();
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(Select_Offers);
              ResultSet rs = preparedStatement.executeQuery()) {
@@ -119,7 +119,7 @@ public class DAO2 {
 
                 String Titre = rs.getString("Titre");
                 int id_Recruteur = rs.getInt("Id_Recruteur");
-                offers.add(new Offer2(id,Description,Titre,dt,id_Recruteur));
+                offers.add(new Offer(id,Description,Titre,dt,id_Recruteur));
 
 
 

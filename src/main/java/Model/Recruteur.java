@@ -1,16 +1,16 @@
-package model;
+package Model;
 
-public class Recruteur2 extends Users2 {
+public class Recruteur extends Users {
 
-    public Recruteur2(int id, String nom, String email, String telephone, String password) {
+    public Recruteur(int id, String nom, String email, String telephone, String password) {
         super(id, nom, email, telephone,password);
     }
 
-    public Recruteur2(String nom, String email, String telephone) {
+    public Recruteur(String nom, String email, String telephone) {
         super(nom, email, telephone);
     }
 
-    public Recruteur2(int id) {
+    public Recruteur(int id) {
         super(id);
     }
 
